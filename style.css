@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary Colours */
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+
+    /* Neutral Colours */
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: Poppins-BoldItalic;
+    src: url(./assets/fonts/Poppins-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: Poppins-ExtraBold;
+    src: url(./assets/fonts/Poppins-ExtraBold);
+}
+
+@font-face {
+    font-family: Poppins-ExtraBoldItalic;
+    src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Italic;
+    src: url(./assets/fonts/Poppins-Italic.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--off-white);
+}
+
+p {
+    padding: 0.5rem 0;
+    font-family: Poppins-Italic;
+    color: var(--light-red);
+}
+
+hr {
+    opacity: 20%;
+    width: 100%;
+}
+
+span {
+    color: var(--purple);
+}
+
+main {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 0.8rem 0.8rem 10rem 0.8rem;
+    width: 630px;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+#values {
+    font-family: Poppins-ExtraBoldItalic;
+    font-size: 32px;
+}
+
+label {
+    display: block;
+    font-family: Poppins-Bold;
+    font-size: 11px;
+    color: var(--smokey-grey);
+}
+
+input {
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    border: 1.5px solid var(--light-grey);
+    outline: 0;
+    font-family: Poppins-Bold;
+    font-size: 20px;
+    width: 120px;
+    cursor: pointer;
+    margin-top: 0.3rem;
+}
+
+input:focus {
+    border: 1.5px solid var(--purple);
+}
+
+.line-arrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.line-arrow img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0.8rem;
+    background-color: var(--purple);
+    cursor: pointer;
+}
+
+.line-arrow img:hover {
+    background-color: var(--off-black);
+}
+
+.error {
+    font-size: 12px;
+    display: none;
+}
+
+@media (max-width: 425px) {
+    main {
+        width: 400px;
+        margin: 10px 10px;
+        padding: 3rem 1.5rem;
+        border-radius: 0.8rem 0.8rem 6rem 0.8rem;
+    }
+    
+    input {
+        width: 100%;
+    }
+
+    .line-arrow {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2.5rem;
+    }
+
+    .line-arrow img {
+        position: relative;
+        top: 0%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+    }
+
+    #values {
+        font-size: 24px;
+    }
+
+    #inputs {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 375px) {
+    main {
+        width: 355px;
+    }
+}
